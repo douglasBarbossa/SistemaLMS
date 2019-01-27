@@ -12,6 +12,12 @@ namespace SistemaLMS
     {
         static void Main(string[] args)
         {
+            Departamento humanas = new Departamento();
+            humanas.Nome = "Departamento de Humanas";
+
+            Departamento exatas = new Departamento();
+            exatas.Nome = "Departamento de Exatas";
+
             Aluno joazinho = new Aluno();
             joazinho.setNome("João Ribeiro");
             joazinho.setIdade(14);
@@ -36,6 +42,7 @@ namespace SistemaLMS
             jose.Bonus = 0;
             WriteLine("Salario {0:c}", jose.CalcularSalarioFinal(120));
             jose.imprimir();
+            jose.setDepartamento = exatas;
             jose.addAluno(joazinho);
             jose.addAluno(ritinha);
             jose.ImprimirAlunos();
@@ -48,10 +55,13 @@ namespace SistemaLMS
             maria.Bonus = 15;
             WriteLine("Salario {0:c}", maria.CalcularSalarioFinal(120));
             maria.imprimir();
+            maria.setDepartamento = humanas;
             maria.addAluno(joazinho);
             maria.ImprimirAlunos();
 
+            WriteLine("Sistema LMS - Colégio Peraltas");
             ReadLine();
         }
     }
 }
+
