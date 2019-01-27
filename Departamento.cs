@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
+
 
 namespace SistemaLMS
 {
@@ -19,7 +21,15 @@ namespace SistemaLMS
 
         public void addProfessor(Professor professor)
         {
-
+            this.professores.Add(professor);
+        }
+        public void ListarProfessores()
+        {
+            foreach (Professor professor in this.professores)
+            {
+                WriteLine("Professor: {0}", professor.getNome());
+            }
+            WriteLine("\n -------------------------------------------------------- \n");
         }
     }
 }
