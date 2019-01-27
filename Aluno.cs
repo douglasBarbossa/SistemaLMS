@@ -10,6 +10,7 @@ namespace SistemaLMS
     {
         private string matricula;
         private bool presente;
+        public List<Professor> professores = new List<Professor>();
 
         public string Matricula
         {
@@ -24,26 +25,30 @@ namespace SistemaLMS
         }
 
 
-        public void estaPresente(bool presenca)
-        {
-            this.presente = presenca;
-            if (presenca)
-            {
-                WriteLine("Esta presente!");
-            }
-            else
-            {
-                WriteLine("Faltou!!");
-            }
-    
-        }
         public void imprimir()
         {
             WriteLine("Nome: {0}", this.getNome());
             WriteLine("Idade: {0}", this.getIdade());
             WriteLine("Marticula: {0}", this.Matricula);
             WriteLine("Presente: {0}", this.Presente);
+            WriteLine("Presente: {0}", this.ResponderPresenca());
             WriteLine("\n -------------------------------------------------------- \n");
+        }
+
+        public string ResponderPresenca()
+        {
+            if (this.Presente)
+            {
+                return "PRESENTE!!";
+            }
+            else
+            {
+                return "FALTOU!!";
+            }
+        }
+        public void addProfessor(Professor professor)
+        {
+            this.professores.Add(professor);
         }
     }
 }
