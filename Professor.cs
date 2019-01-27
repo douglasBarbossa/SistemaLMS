@@ -46,7 +46,7 @@ namespace SistemaLMS
         {
             return this.ValorHora * horas;
         }
-        public double CalcularSalario(int horas, int bonificacao)
+        public double CalcularSalario(int horas, double bonificacao)
         {
             double valor = this.ValorHora * horas;
             double pct = bonificacao / 100;
