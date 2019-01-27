@@ -27,6 +27,9 @@ namespace SistemaLMS
         {
             this.idade = _idade;
         }
-
+        public string ResponderPresenca()
+        {
+            return "Estou aqui";
+        }
     }
 }
